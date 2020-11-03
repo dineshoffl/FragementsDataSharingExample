@@ -10,6 +10,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="fragment1"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="wrap_content">
@@ -20,7 +21,7 @@
         android:layout_width="wrap_content"
         android:id="@+id/btn_fragment1"
         android:textColor="@color/white"
-        android:text="Click fragment 1"
+        android:text="Click1 fragment 1"
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,4 +30,16 @@
 
     </Button>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/btn2_fragment1"
+        android:textColor="@color/white"
+        android:text="Click2 fragment 1"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_fragment1"
+        android:layout_height="wrap_content">
+
+    </Button>
 </androidx.constraintlayout.widget.ConstraintLayout>

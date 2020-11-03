@@ -8,6 +8,7 @@
         android:layout_width="wrap_content"
         android:id="@+id/tv_second_fragment"
         android:text="fragment2"
+        android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,6 +26,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_second_fragment"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
+        android:id="@+id/btn2_fragment2"
+        android:text="Click2 fragment 2"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_fragment2"
         android:layout_height="wrap_content">
 
     </Button>

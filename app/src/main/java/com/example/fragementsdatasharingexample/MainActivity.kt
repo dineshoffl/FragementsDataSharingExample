@@ -4,7 +4,6 @@ package com.example.fragementsdatasharingexample
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.first_fragment_layout.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode

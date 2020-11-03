@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.first_fragment_layout.*
 import kotlinx.android.synthetic.main.second_fragment_layout.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
@@ -21,14 +20,26 @@ class Fragment2 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btn_fragment2.setOnClickListener {
-            EventBus.getDefault().post(Events.FragmentTwoToFragmentOne("Fragment two clicked"));
+            EventBus.getDefault().post(Events.FragmentTwoClick1ToFragmentOne("Fragment click1 two clicked"));
         }
+        btn2_fragment2.setOnClickListener {
+            EventBus.getDefault().post(Events.FragmentTwoClick2ToFragmentOne(2));
+        }
+
     }
 
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onTextReceived(result: Events.FragmentOneToFragmentTwo) {
-        tv_second_fragment.text = result.message
+    fun onTextReceived(result: Events) {
+        when(result){
+            is Events.FragmentOneClick1ToFragmentTwo ->{
+                tv_second_fragment.text = result.message
+            }
+            is Events.FragmentOneClick2ToFragmentTwo ->{
+                tv_second_fragment.text = result.message.toString() + "Clicked"
+            }
+        }
+
     }
 
     override fun onStart() {

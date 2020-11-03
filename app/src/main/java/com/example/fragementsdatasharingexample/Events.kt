@@ -1,11 +1,18 @@
 package com.example.fragementsdatasharingexample
 
-class Events {
 
-    class FragmentOneToFragmentTwo(val message: String)
+open class Events {
 
-    class FragmentTwoToFragmentOne(val message: String)
 
-    class FragmentOneToMainActivity(val message: String)
+    data class FragmentOneClick1ToFragmentTwo(val message: String) : Events()
+
+    data class FragmentOneClick2ToFragmentTwo(val message: Int) : Events()
+
+    data class FragmentTwoClick1ToFragmentOne(val message: String): Events()
+
+    data class FragmentTwoClick2ToFragmentOne(val message: Int): Events()
+
+    data  class FragmentOneToMainActivity(val message: String)
+
 
 }
